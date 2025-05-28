@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>My Website</h1>
+        <nav>
+          <a href="#" class="active">Home</a>
+          <a href="#about">About</a>
+          <a href="#blog">Blog</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h2 class="hero-title">Welcome to My Website</h2>
+        <p class="hero-subtitle">This is a simple, responsive template built with Tailwind CSS.</p>
+        <a href="#about" class="hero-button">Learn More</a>
+      </div>
+    </section>
+
+    <section class="section fade-in" id="features">
+      <div>
+        <h3 class="section-title">Features</h3>
+        <div class="grid-cols">
+          <div class="card fade-in" style="animation-delay: 0.1s">
+            <h4 class="card-title">Blog Posts</h4>
+            <p>Implemented a feature to add links to blog posts</p>
+          </div>
+          <div class="card fade-in" style="animation-delay: 0.2s">
+            <h4 class="card-title">Interactive</h4>
+            <p>Certain sections of the website highlight when the mouse hovers over it.</p>
+          </div>
+          <div class="card fade-in" style="animation-delay: 0.3s">
+            <h4 class="card-title">Easy to Customize</h4>
+            <p>Built with utility-first Tailwind classes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fade-in" id="about">
+      <div>
+        <h3 class="section-title">About Me</h3>
+        <p>I am a undergraduate student studying Artificial Intelligence at university. I am currently finishing my first year. I enjoy playing volleyball and going to the gym as well as learn how I can become a more skilled programmer.</p>
+      </div>
+    </section>
+
+    <section id="blog" class="section fade-in">
+      <div>
+        <h3 class="section-title">Latest Blog Posts</h3>
+        <div class="grid-cols">
+          <a href="blogs/post1.html" target="_blank" class="card fade-in" style="animation-delay: 0.1s">
+            <h4 class="card-title">The Big Debate: 100 Humans VS 1 Gorilla - Who Wins?</h4>
+            <p>A short debate on the trending topic: Who win in a fight 100 Humans or 1 Gorilla?</p>
+          </a>
+          <a href="blogs/post2.html" target="_blank" class="card fade-in" style="animation-delay: 0.2s">
+            <h4 class="card-title">Python Physics Engine (Work in Progress)</h4>
+            <p>A simple 2D physics engine built with Python. Project status: In development.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects-section fade-in">
+      <div>
+        <h3 class="section-title">Other Projects</h3>
+        <div class="projects-grid">
+          <a href="blogs/post1.html" class="project-card fade-in" style="animation-delay: 0.1s">
+          <!--https://www.worldwildlife.org/species/gorilla-->
+            <img src="images/silverback_gorilla.jpg" alt="Gorilla Debate Project" class="project-image">
+            <div class="project-content">
+              <h4 class="project-title">The Great Gorilla Debate</h4>
+              <p class="project-description">An engaging blog post exploring the hypothetical battle between 100 humans and a silverback gorilla, complete with detailed analysis and statistics.</p>
+              <div class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">Blog</span>
+              </div>
+            </div>
+          </a>
+          
+          <a href="projects/game_of_life.html" class="project-card fade-in" style="animation-delay: 0.2s">
+            <img src="images/game_of_life_preview.png" alt="Conway's Game of Life" class="project-image">
+            <div class="project-content">
+              <h4 class="project-title">Conway's Game of Life</h4>
+              <p class="project-description">An interactive simulation of Conway's Game of Life, featuring various patterns, speed control, and real-time statistics.</p>
+              <div class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">Simulation</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="projects/langtons_ant.html" class="project-card fade-in" style="animation-delay: 0.3s">
+            <img src="images/langtons_ant_preview.png" alt="Langton's Ant Simulation" class="project-image">
+            <div class="project-content">
+              <h4 class="project-title">Langton's Ant Simulation</h4>
+              <p class="project-description">An interactive cellular automaton simulation (Langton's Ant) (Work in Progress) – an "ant" moves on a grid (turning right on white cells, left on black cells) and produces emergent chaotic patterns.</p>
+              <div class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">Simulation</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section-alt fade-in">
+      <div>
+        <h3 class="section-title">Gallery</h3>
+        <div class="grid-gallery">
+          <img src="images/silverback_gorilla.jpg" alt="Average Silverback gorilla" class="gallery-img fade-in" style="animation-delay: 0.1s">
+          <img src="images/python_engine.png" alt="python physics engine showcase" class="gallery-img fade-in" style="animation-delay: 0.2s">
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section fade-in">
+      <div>
+        <h3 class="section-title">Contact Us</h3>
+        <form class="contact-form">
+          <input type="text" placeholder="Name" class="input-field">
+          <input type="email" placeholder="Email" class="input-field">
+          <textarea rows="4" placeholder="Message" class="input-field"></textarea>
+          <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>
+        © 2025 My Website. All rights reserved.
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

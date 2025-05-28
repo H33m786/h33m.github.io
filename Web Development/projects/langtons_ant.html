@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Langton's Ant Simulation</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/langtons_ant.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>My Website</h1>
+      <nav>
+        <a href="../index.html" class="active">Home</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#blog">Blog</a>
+        <a href="../index.html#gallery">Gallery</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <article class="blog-post fade-in">
+      <h1>Langton's Ant Simulation</h1>
+      <div class="meta">
+        An interactive cellular automaton simulation (Work in Progress)
+      </div>
+      <p>Langton's Ant is a cellular automaton devised by Chris Langton. In this simulation, an "ant" moves on a grid according to a simple rule (for example, on a white cell, turn right, flip the cell's color, and move forward; on a black cell, turn left, flip the cell's color, and move forward). Over time, the ant's trail produces emergent, chaotic patterns.</p>
+
+      <div class="game-container">
+        <div id="errorMessage" class="error-message"></div>
+        <div class="game-controls">
+          <button id="startBtn" class="game-button">Start</button>
+          <button id="stopBtn" class="game-button" disabled>Stop</button>
+          <button id="clearBtn" class="game-button">Clear</button>
+          <button id="randomBtn" class="game-button">Random</button>
+        </div>
+        <div class="game-speed">
+          <label for="speedRange">Speed:</label>
+          <input type="range" id="speedRange" min="1" max="100" value="5" />
+          <span id="speedValue">5</span> fps
+        </div>
+        <div id="gameGrid" class="game-grid"></div>
+        <div class="game-stats">
+          <div>Generation: <span id="generationCount">0</span></div>
+          <div>Alive Cells: <span id="aliveCount">0</span></div>
+        </div>
+      </div>
+
+      <h2>How to Play</h2>
+      <ul>
+        <li>Click "Start" to begin the simulation.</li>
+        <li>Use "Stop" to pause, "Clear" to reset the grid, and "Random" to randomize the grid.</li>
+        <li>Adjust the speed slider to control the simulation speed.</li>
+      </ul>
+
+      <h2>Rules</h2>
+      <ul>
+        <li>On a white cell, the ant turns right, flips the cell's color (to black), and moves forward.</li>
+        <li>On a black cell, the ant turns left, flips the cell's color (to white), and moves forward.</li>
+      </ul>
+
+      <a href="../index.html" class="back-button">← Back to Home</a>
+    </article>
+  </section>
+
+  <footer class="footer">
+    <div>
+      © 2025 My Website. All rights reserved.
+    </div>
+  </footer>
+  <script src="../js/script.js"></script>
+  <script>
+    (function() { if (typeof showContent === "function") showContent(); })();
+  </script>
+  <script src="../js/langtons_ant.js"></script>
+</body>
+</html> 

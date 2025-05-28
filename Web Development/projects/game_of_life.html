@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conway's Game of Life</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/game_of_life.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>My Website</h1>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#blog">Blog</a>
+        <a href="../index.html#gallery">Gallery</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <article class="blog-post fade-in">
+      <h1>Conway's Game of Life</h1>
+      
+      <div class="meta">
+        An interactive cellular automaton simulation
+      </div>
+
+      <p>Conway's Game of Life is a cellular automaton devised by mathematician John Conway in 1970. It's a zero-player game, meaning its evolution is determined by its initial state, requiring no further input.</p>
+
+      <div class="game-container">
+        <div id="errorMessage" class="error-message"></div>
+        
+        <div class="game-controls">
+          <button id="startBtn" class="game-button">Start</button>
+          <button id="stopBtn" class="game-button" disabled>Stop</button>
+          <button id="clearBtn" class="game-button">Clear</button>
+          <button id="randomBtn" class="game-button">Random</button>
+        </div>
+
+        <div class="game-presets">
+          <button class="preset-button" data-preset="glider">Glider</button>
+          <button class="preset-button" data-preset="blinker">Blinker</button>
+          <button class="preset-button" data-preset="block">Block</button>
+          <button class="preset-button" data-preset="beehive">Beehive</button>
+          <button class="preset-button" data-preset="pulsar">Pulsar</button>
+        </div>
+
+        <div class="game-speed">
+          <label for="speedRange">Speed:</label>
+          <input type="range" id="speedRange" min="1" max="10" value="5">
+          <span id="speedValue">5</span> fps
+        </div>
+
+        <div id="gameGrid" class="game-grid"></div>
+
+        <div class="game-stats">
+          <div>Generation: <span id="generationCount">0</span></div>
+          <div>Alive Cells: <span id="aliveCount">0</span></div>
+        </div>
+      </div>
+
+      <h2>How to Play</h2>
+      <ul>
+        <li>Click cells to toggle them between alive and dead states</li>
+        <li>Use the Start/Stop buttons to control the simulation</li>
+        <li>Try different presets to see common patterns</li>
+        <li>Adjust the speed slider to control simulation speed</li>
+      </ul>
+
+      <h2>Rules</h2>
+      <ul>
+        <li>Any live cell with fewer than two live neighbors dies (underpopulation)</li>
+        <li>Any live cell with two or three live neighbors lives on to the next generation</li>
+        <li>Any live cell with more than three live neighbors dies (overpopulation)</li>
+        <li>Any dead cell with exactly three live neighbors becomes a live cell (reproduction)</li>
+      </ul>
+
+      <a href="../index.html" class="back-button">← Back to Home</a>
+    </article>
+  </section>
+
+  <footer class="footer">
+    <div>
+      © 2025 My Website. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/game_of_life.js"></script>
+</body>
+</html> 
